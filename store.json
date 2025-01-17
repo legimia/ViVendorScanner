@@ -1,0 +1,119 @@
+{
+  "items": {
+    "ciii_helmet": {
+      "trigger": "an advanced combat helmet with reinforced durasteel"
+    },
+    "ciii_body": {
+      "trigger": "a heavy durasteel combat suit"
+    },
+    "cii_helmet": {
+      "trigger": "a starfighter helmet featuring a flick-down visor"
+    },
+    "cii_body": {
+      "trigger": "an insulated EVA jumpsuit paired with a flak vest"
+    },
+    "stimpacks_medpacs": {
+      "trigger": "a stack of stimpacks"
+    },
+    "comlink": {
+      "trigger": "a compact comlink with encrypted channels"
+    },
+    "backpacks": {
+      "trigger": "a reinforced field backpack"
+    },
+    "flashlights": {
+      "trigger": "a tactical flashlight with adjustable beam"
+    },
+    "repeaters": {
+      "trigger": "an engraved VI-10E starforged repeater carbine"
+    },
+    "pistols": {
+      "trigger": "an engraved VI-10E starforged blaster pistol"
+    },
+    "rifles": {
+      "trigger": "an engraved VI-10E starforged blaster rifle"
+    },
+    "blades": {
+      "trigger": "a vibrorapier with intricate detailing"
+    },
+    "pikes": {
+      "trigger": "an electrified vibropike"
+    },
+    "goggles": {
+      "trigger": "a pair of 'VI' industrial goggles"
+    },
+    "datapad": {
+      "trigger": "a high-capacity datapad with encryption support"
+    }
+  },
+  "stores": {
+    "Ryloth": {
+      "store_number": 5,
+      "inventory": {
+        "ciii_helmet": 3,
+        "ciii_body": 3,
+        "cii_helmet": 3,
+        "cii_body": 3,
+        "stimpacks_medpacs": 50,
+        "comlink": 5,
+        "backpacks": 5,
+        "flashlights": 20,
+        "repeaters": 4,
+        "pistols": 8,
+        "rifles": 4,
+        "blades": 8,
+        "pikes": 4,
+        "goggles": 4,
+        "datapad": 5
+      }
+    },
+    "Wroona": {
+      "store_number": 3,
+      "inventory": {
+        "stimpacks_medpacs": 50,
+        "goggles": 4,
+        "comlink": 4,
+        "backpacks": 4,
+        "flashlights": 10,
+        "repeaters": 2,
+        "pistols": 4,
+        "rifles": 2,
+        "blades": 4,
+        "pikes": 2,
+        "datapad": 5
+      }
+    },
+    "Kashyyyk": {
+      "store_number": 4,
+      "inventory": {
+        "stimpacks_medpacs": 50,
+        "goggles": 4,
+        "comlink": 4,
+        "backpacks": 4,
+        "flashlights": 10,
+        "repeaters": 2,
+        "pistols": 4,
+        "rifles": 2,
+        "blades": 4,
+        "pikes": 2,
+        "datapad": 5
+      }
+    },
+    "Arkania": {
+      "store_number": 2,
+      "inventory": {
+        "stimpacks_medpacs": 50,
+        "goggles": 4,
+        "comlink": 4,
+        "backpacks": 4,
+        "flashlights": 10,
+        "repeaters": 2,
+        "pistols": 4,
+        "rifles": 2,
+        "blades": 4,
+        "pikes": 2,
+        "datapad": 5
+      }
+    }
+  }
+}
