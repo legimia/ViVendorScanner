@@ -1,10 +1,10 @@
 {
   "items": {
     "ciii_helmet": {
-      "trigger": "an advanced combat helmet with reinforced durasteel"
+      "trigger": "a heavily plated 'VI' explorer bodysuit"
     },
     "ciii_body": {
-      "trigger": "a heavy durasteel combat suit"
+      "trigger": "a heavily plated 'VI' explorer bodysuit"
     },
     "cii_helmet": {
       "trigger": "a starfighter helmet featuring a flick-down visor"
@@ -13,7 +13,7 @@
       "trigger": "an insulated EVA jumpsuit paired with a flak vest"
     },
     "stimpacks_medpacs": {
-      "trigger": "a stack of stimpacks"
+      "trigger": "a combat-grade 'VI' kolto injector"
     },
     "comlink": {
       "trigger": "a compact comlink with encrypted channels"
@@ -34,10 +34,10 @@
       "trigger": "an engraved VI-10E starforged blaster rifle"
     },
     "blades": {
-      "trigger": "a vibrorapier with intricate detailing"
+      "trigger": "an enhanced VI-10 voidforged vibroblade"
     },
     "pikes": {
-      "trigger": "an electrified vibropike"
+      "trigger": "an enhanced VI-10 voidforged electrostaff"
     },
     "goggles": {
       "trigger": "a pair of 'VI' industrial goggles"
