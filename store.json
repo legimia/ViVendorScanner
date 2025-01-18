@@ -7,31 +7,37 @@
       "trigger": "a heavily plated 'VI' explorer bodysuit"
     },
     "cii_helmet": {
-      "trigger": "a starfighter helmet featuring a flick-down visor"
+      "trigger": "a plated 'VI' explorer helmet"
     },
     "cii_body": {
-      "trigger": "an insulated EVA jumpsuit paired with a flak vest"
+      "trigger": "a plated 'VI' explorer bodysuit"
+    },
+    "cii_body_con": {
+      "trigger": "an armored environmental suit"
+    },
+    "cii_helmet_con": {
+      "trigger": "an armored environmental helm"
     },
     "stimpacks_medpacs": {
       "trigger": "a combat-grade 'VI' kolto injector"
     },
     "comlink": {
-      "trigger": "a compact comlink with encrypted channels"
+      "trigger": "a Veridian Industries comlink pack"
     },
     "backpacks": {
-      "trigger": "a reinforced field backpack"
+      "trigger": "a branded 'VI' industrial backpack"
     },
     "flashlights": {
-      "trigger": "a tactical flashlight with adjustable beam"
+      "trigger": "an industrial 'VI' flashlight"
     },
     "repeaters": {
-      "trigger": "an engraved VI-10E starforged repeater carbine"
+      "trigger": "an enhanced VI-10 starforged repeater carbine"
     },
     "pistols": {
-      "trigger": "an engraved VI-10E starforged blaster pistol"
+      "trigger": "an enhanced VI-10 starforged blaster pistol"
     },
     "rifles": {
-      "trigger": "an engraved VI-10E starforged blaster rifle"
+      "trigger": "an enhanced VI-10 starforged blaster rifle"
     },
     "blades": {
       "trigger": "an enhanced VI-10 voidforged vibroblade"
@@ -43,17 +49,19 @@
       "trigger": "a pair of 'VI' industrial goggles"
     },
     "datapad": {
-      "trigger": "a high-capacity datapad with encryption support"
+      "trigger": "a durable 'VI' brand industrial data-slate"
     }
   },
   "stores": {
     "Ryloth": {
       "store_number": 5,
       "inventory": {
-        "ciii_helmet": 4,
+        "ciii_helmet": 3,
         "ciii_body": 3,
         "cii_helmet": 3,
         "cii_body": 3,
+        "cii_body_con": 3,
+        "cii_helmet_con": 3,
         "stimpacks_medpacs": 50,
         "comlink": 5,
         "backpacks": 5,
