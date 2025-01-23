@@ -26,13 +26,11 @@ function startInventoryUpdate()
     downloadInventoryFile()
 end
 
-
 -- Function to download the JSON file without inline callback
 function downloadInventoryFile()
     print("Starting download from:", jsonUrl)
     downloadFile(filePath, jsonUrl)
 end
-
 
 -- Function called when the file download completes
 function onFileDownloaded(event, filename)
@@ -125,7 +123,6 @@ function initializePersistentDynamicTriggers()
     end
 end
 
-
 function createTrigger(itemName, pattern)
     local fullPattern = "^ {3}" .. pattern .. " \\((\\d+)\\)$"
     if exists("DynamicTrigger_" .. itemName, "trigger") == 0 then
@@ -199,8 +196,6 @@ function display_store_inventory(store)
 
     print("----------------------------------------")
 end
-
-
 
 function processNextStore()
     if currentStoreIndex >= #storeQueue then
@@ -311,7 +306,6 @@ function display_total_needed_minus_count()
     print("----------------------------------------")
 end
 
-
 function checkInventoryCompletion()
     local complete = true
     for store, storeData in pairs(_G.inventories or {}) do
@@ -364,9 +358,6 @@ function scanStartup()
     end
 end
 
-
-
-
 function debugInventory()
     print("Debugging Inventory Data:")
     for storeName, storeDetails in pairs(_G.inventories or {}) do
@@ -412,18 +403,30 @@ function setupVendScanAliases()
     end
 
     -- Alias to display store inventory with optional parameter
-     if exists("vivend", "alias") == 0 then
-        permAlias("vivend", "VendScan", "^vivend%s*(%S*)$", [[
-            local store = matches[2] and matches[2]:match("^%s*(.-)%s*$") or nil
-            display_store_inventory(store)
+-- Alias to display specific store inventory
+    if exists("vivend", "alias") == 0 then
+        permAlias("vivend", "VendScan", "^vivend (\\w+)$", [[
+            local store = matches[2]
+            if store and store ~= "" then
+                display_store_inventory(store)
+            else
+                print("Error: Please specify a valid store name.")
+            end
         ]])
-        
         if debugingScan then print("Alias 'vivend' created.") end
     else
         if debugingScan then print("Alias 'vivend' already exists.") end
     end
-
-
+    
+    -- Alias to display all stores
+    if exists("viall", "alias") == 0 then
+        permAlias("viall", "VendScan", "^viall$", [[
+            display_store_inventory()
+        ]])
+        if debugingScan then print("Alias 'viall' created.") end
+    else
+        if debugingScan then print("Alias 'viall' already exists.") end
+    end
 
     -- Alias to display total needed minus count
     if exists("vitotal", "alias") == 0 then
@@ -472,7 +475,8 @@ function setupVendScanAliases()
             print("VendScan Alias Commands:")
             print("-----------------------------------------")
             print("viscan       - Start the scanning process.")
-            print("vivend <store> - Show inventory for a specific store (or all).")
+            print("vivend <store> - Show inventory for a specific store.")
+            print("viall        - Display all items needed restocking")
             print("vitotal      - Display total needed items.")
             print("videbug      - Toggle debugging mode.")
             print("vidownload   - Manually download the latest inventory file.")
@@ -488,8 +492,4 @@ function setupVendScanAliases()
     print("VendScan aliases setup complete.")
 end
 
--- Call the function to set up the aliases at startup
-
-
 scanStartup()
-
