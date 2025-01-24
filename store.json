@@ -50,6 +50,57 @@
     },
     "datapad": {
       "trigger": "a durable 'VI' brand industrial data-slate"
+    },
+    "Bacta": {
+      "trigger": "A bacta underlay"
+    },
+    "zabrak": {
+      "trigger": "A zabrak combat mesh underlay"
+    },
+    "verpine": {
+      "trigger": "A verpine fiber mesh underlay"
+    },
+    "craftmaster": {
+      "trigger": "Craftmaster Premium Duraplast"
+    },
+    "Duralumin": {
+      "trigger": "a sheet of armor-grade duralumin-alloy durasteel"
+    },
+    "beleti": {
+      "trigger": "a brick of Beleti duraplast"
+    },
+    "Ablative": {
+      "trigger": "A batch of chemicals labeled 'Ablative Coating'"
+    },
+    "Plating": {
+      "trigger": "A batch of chemicals labeled 'Plating Coating'"
+    },
+    "High_Quality_battery": {
+      "trigger": "a high quality battery"
+    },
+    "overccharged_battery": {
+      "trigger": "An overcharged battery"
+    },
+    "chromite": {
+      "trigger": "Chromite Infused Durasteel"
+    },
+    "vinecat": {
+      "trigger": "a length of vine cat leather "
+    },
+    "Lorrdco_Chemicals": {
+      "trigger": "A Batch of Premium Grade LorrdCo Chemicals"
+    },
+    "Cooling unit": {
+      "trigger": "an [RT-56] Silver Compound Cooling Unit"
+    },
+    "scope": {
+      "trigger": "Precision rifle scope"
+    },
+    "Ithor Gel": {
+      "trigger": "a tube of Ithor's Own brand silicon gel"
+    },
+    "Rycrit": {
+      "trigger": "a chunk of fossilized rycrit bone"
     }
   },
   "stores": {
@@ -121,6 +172,28 @@
         "blades": 4,
         "pikes": 2,
         "datapad": 5
+      }
+    },
+    "QuarterMaster": {
+      "store_number": 1,
+      "inventory": {
+        "Bacta": 100,
+        "zabrak": 25,
+        "verpine": 25,
+        "craftmaster": 50,
+        "Duralumin": 100,
+        "beleti": 25,
+        "Ablative": 25,
+        "Plating": 25,
+        "High Quality battery": 50,
+        "overccharged battery": 50,
+        "chromite": 100,
+        "vinecat": 50,
+        "Lorrdco Chemicals": 100,
+        "Cooling unit": 50,
+        "scope": 50,
+        "Ithor Gel": 100,
+        "Rycrit": 300
       }
     }
   }
