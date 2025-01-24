@@ -98,9 +98,6 @@
     },
     "Ithor_Gel": {
       "trigger": "a tube of Ithor's Own brand silicon gel"
-    },
-    "Rycrit": {
-      "trigger": "a chunk of fossilized rycrit bone"
     }
   },
   "stores": {
@@ -173,28 +170,7 @@
         "pikes": 2,
         "datapad": 5
       }
-    },
-    "QuarterMaster": {
-      "store_number": 1,
-      "inventory": {
-        "Bacta": 100,
-        "zabrak": 25,
-        "verpine": 25,
-        "craftmaster": 50,
-        "Duralumin": 100,
-        "beleti": 25,
-        "Ablative": 25,
-        "Plating": 25,
-        "High_Quality_battery": 50,
-        "overccharged_battery": 50,
-        "chromite": 100,
-        "vinecat": 50,
-        "Lorrdco_Chemicals": 100,
-        "Cooling_unit": 50,
-        "scope": 50,
-        "Ithor Gel": 100,
-        "Rycrit": 300
-      }
+    }
     }
   }
 }
