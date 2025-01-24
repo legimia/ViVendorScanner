@@ -287,21 +287,37 @@ function display_total_needed_minus_count()
         return
     end
 
+    local aggregatedItems = {}
+
+    -- Aggregate item counts from all stores
+    for storeName, storeData in pairs(_G.inventories) do
+        for itemName, itemData in pairs(storeData.items) do
+            if not aggregatedItems[itemName] then
+                aggregatedItems[itemName] = { needed = 0, count = 0 }
+            end
+            aggregatedItems[itemName].needed = aggregatedItems[itemName].needed + (itemData.needed or 0)
+            aggregatedItems[itemName].count = aggregatedItems[itemName].count + (itemData.count or 0)
+        end
+    end
+
+    -- Sort items alphabetically by name
+    local sortedKeys = {}
+    for itemName in pairs(aggregatedItems) do
+        table.insert(sortedKeys, itemName)
+    end
+    table.sort(sortedKeys)
+
     print("----------------------------------------")
     print("| Product Name        | Needed         |")
     print("----------------------------------------")
 
-    for storeName, storeData in pairs(_G.inventories) do
-        for itemName, itemData in pairs(storeData.items) do
-            local needed = itemData.needed or 0
-            local count = itemData.count or 0
-            local difference = needed - count
-            if difference > 0 then
-                print(string.format("| %-18s | %-15d |", itemName, difference))
-            end
+    for _, itemName in ipairs(sortedKeys) do
+        local itemData = aggregatedItems[itemName]
+        local difference = itemData.needed - itemData.count
+        if difference > 0 then
+            print(string.format("| %-18s | %-15d |", itemName, difference))
         end
     end
-
 
     print("----------------------------------------")
 end
@@ -482,6 +498,9 @@ function setupVendScanAliases()
             print("vidownload   - Manually download the latest inventory file.")
             print("vireset      - Reset the scanning process.")
             print("vihelp       - Show this help message.")
+            print("")
+            print("if you update the inventory file with new designs. you must delete the DynamicVendorTriggers")
+            print("should automatically pick up once download is complete")
             print("-----------------------------------------")
         ]])
         if debugingScan then print("Alias 'vihelp' created.") end
