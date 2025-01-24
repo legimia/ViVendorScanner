@@ -90,13 +90,13 @@
     "Lorrdco_Chemicals": {
       "trigger": "A Batch of Premium Grade LorrdCo Chemicals"
     },
-    "Cooling unit": {
+    "Cooling_unit": {
       "trigger": "an [RT-56] Silver Compound Cooling Unit"
     },
     "scope": {
       "trigger": "Precision rifle scope"
     },
-    "Ithor Gel": {
+    "Ithor_Gel": {
       "trigger": "a tube of Ithor's Own brand silicon gel"
     },
     "Rycrit": {
@@ -185,12 +185,12 @@
         "beleti": 25,
         "Ablative": 25,
         "Plating": 25,
-        "High Quality battery": 50,
-        "overccharged battery": 50,
+        "High_Quality_battery": 50,
+        "overccharged_battery": 50,
         "chromite": 100,
         "vinecat": 50,
-        "Lorrdco Chemicals": 100,
-        "Cooling unit": 50,
+        "Lorrdco_Chemicals": 100,
+        "Cooling_unit": 50,
         "scope": 50,
         "Ithor Gel": 100,
         "Rycrit": 300
