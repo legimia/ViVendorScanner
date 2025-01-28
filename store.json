@@ -169,7 +169,8 @@
         "blades": 4,
         "pikes": 2,
         "datapad": 5
-      },
+      }
+    },
     "QuarterMaster": {
       "store_number": 1,
       "inventory": {
@@ -190,7 +191,7 @@
         "scope": 50,
         "Ithor Gel": 100
       }
-    }
+
     }
   }
 }
