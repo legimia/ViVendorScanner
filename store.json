@@ -1,16 +1,16 @@
 {
   "items": {
     "ciii_helmet": {
-      "trigger": "a heavily plated [VI] explorer bodysuit"
+      "trigger": "a heavily plated 'VI' explorer bodysuit"
     },
     "ciii_body": {
-      "trigger": "a heavily plated [VI] explorer bodysuit"
+      "trigger": "a heavily plated 'VI' explorer bodysuit"
     },
     "cii_helmet": {
-      "trigger": "a plated [VI] explorer helmet"
+      "trigger": "a plated 'VI' explorer helmet"
     },
     "cii_body": {
-      "trigger": "a plated [VI] explorer bodysuit"
+      "trigger": "a plated 'VI' explorer bodysuit"
     },
     "cii_body_con": {
       "trigger": "an armored environmental suit"
@@ -19,16 +19,16 @@
       "trigger": "an armored environmental helm"
     },
     "stimpacks_medpacs": {
-      "trigger": "a combat-grade [VI] kolto injector"
+      "trigger": "a combat-grade 'VI' kolto injector"
     },
     "comlink": {
       "trigger": "a Veridian Industries comlink pack"
     },
     "backpacks": {
-      "trigger": "a branded [VI] industrial backpack"
+      "trigger": "a branded 'VI' industrial backpack"
     },
     "flashlights": {
-      "trigger": "an industrial [VI] flashlight"
+      "trigger": "an industrial 'VI' flashlight"
     },
     "repeaters": {
       "trigger": "an enhanced VI-10 starforged repeater carbine"
@@ -46,10 +46,10 @@
       "trigger": "an enhanced VI-10 voidforged electrostaff"
     },
     "goggles": {
-      "trigger": "a pair of [VI] industrial goggles"
+      "trigger": "a pair of 'VI' industrial goggles"
     },
     "datapad": {
-      "trigger": "a durable [VI] brand industrial data-slate"
+      "trigger": "a durable 'VI' brand industrial data-slate"
     },
     "Bacta": {
       "trigger": "A bacta underlay"
