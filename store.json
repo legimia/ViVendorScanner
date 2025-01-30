@@ -1,16 +1,30 @@
 {
   "items": {
     "ciii_helmet": {
-      "trigger": "a heavily plated 'VI' explorer bodysuit"
+      "trigger": [
+        "a heavily plated 'VI' explorer bodysuit",
+        "a durable durasteel [VI] wanderer helmet",
+        "a flexible durasteel [VI] wanderer helmet"
+      ]
     },
     "ciii_body": {
-      "trigger": "a heavily plated 'VI' explorer bodysuit"
+      "trigger": [
+        "a heavily plated 'VI' explorer bodysuit",
+        "a set of durable durasteel [VI] wanderer body armor"
+      ]
     },
     "cii_helmet": {
-      "trigger": "a plated 'VI' explorer helmet"
+      "trigger": [
+        "a plated 'VI' explorer helmet",
+        "a robust duraplast plated [VI] wanderer helmet",
+        "a sleek duraplast plated [VI] wanderer helmet"
+      ]
     },
     "cii_body": {
-      "trigger": "a plated 'VI' explorer bodysuit"
+      "trigger": [
+        "a plated 'VI' explorer bodysuit",
+        "a robust duraplast plated [VI] wanderer bodysuit"
+      ]
     },
     "cii_body_con": {
       "trigger": "an armored environmental suit"
@@ -19,16 +33,23 @@
       "trigger": "an armored environmental helm"
     },
     "stimpacks_medpacs": {
-      "trigger": "a combat-grade 'VI' kolto injector"
+      "trigger": [
+        "a combat-grade 'VI' kolto injector",
+        "a combat-grade [VI] kolto injector"
     },
     "comlink": {
       "trigger": "a Veridian Industries comlink pack"
     },
     "backpacks": {
-      "trigger": "a branded 'VI' industrial backpack"
+      "trigger": [
+        "a branded 'VI' industrial backpack",
+        "a branded [VI] industrial backpack"
     },
     "flashlights": {
-      "trigger": "an industrial 'VI' flashlight"
+      "trigger": [
+        "an industrial 'VI' flashlight",
+        "an industrial [VI] flashlight"
+      ]
     },
     "repeaters": {
       "trigger": "an enhanced VI-10 starforged repeater carbine"
@@ -49,7 +70,10 @@
       "trigger": "a pair of 'VI' industrial goggles"
     },
     "datapad": {
-      "trigger": "a durable 'VI' brand industrial data-slate"
+      "trigger": [
+        "a durable 'VI' brand industrial data-slate",
+        "a durable [VI] brand industrial data-slate"
+      ]
     },
     "Bacta": {
       "trigger": "A bacta underlay"
@@ -100,10 +124,16 @@
       "trigger": "a tube of Ithor's Own brand silicon gel"
     },
     "Dura Head Bacta": {
-      "trigger": "a duralumin-alloy plated helmet"
+      "trigger": [
+        "a duralumin-alloy plated helmet",
+        "a rugged duralumin plated [VI] wanderer helmet"
+      ]
     },
     "Dura Head Verpine": {
-      "trigger": "a duralumin-alloy plated helmet-V"
+      "trigger": [
+        "a duralumin-alloy plated helmet-V",
+        "a flexible duralumin plated [VI] wanderer helmet"
+      ]
     }
   },
   "stores": {
