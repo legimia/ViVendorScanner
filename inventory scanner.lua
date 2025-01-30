@@ -1,5 +1,7 @@
 -- This script is designed for use in Mudlet to manage inventory tracking via dynamic JSON data
 
+
+
 -- URL to fetch JSON data for inventory
 local jsonUrl = "https://raw.githubusercontent.com/legimia/ViVendorScanner/main/store.json"
 local filePath = getMudletHomeDir() .. "/store.json"
@@ -111,39 +113,43 @@ end
 
 -- Function to initialize pers
 function initializePersistentDynamicTriggers()
-
     for itemName, triggerData in pairs(_G.itemTriggers) do
-        if type(triggerData) == "table" then
-            for _, pattern in ipairs(triggerData) do
-                createTrigger(itemName, pattern)
-            end
-        else
-            createTrigger(itemName, triggerData)
-        end
+        createTrigger(itemName, triggerData)
     end
 end
 
-function createTrigger(itemName, pattern)
-    local fullPattern = "^ {3}" .. pattern .. " \\((\\d+)\\)$"
-    if exists("DynamicTrigger_" .. itemName, "trigger") == 0 then
-        permRegexTrigger("DynamicTrigger_" .. itemName, "DynamicVendorTriggers", {fullPattern}, [[
-        if not matches or not matches[2] then return end
-        local matchedCount = tonumber(matches[2])
-        if matchedCount then
-            if isScanning then add_to_count("]] .. itemName .. [[", matchedCount) end
-            if debugingScan then print("Count updated for item:", "]] .. itemName .. [[", "New count:", matchedCount) end
+
+function createTrigger(itemName, triggerData)
+    local triggerPatterns = {}
+
+    if type(triggerData) == "table" then
+        for _, pattern in ipairs(triggerData) do
+            local escapedPattern = pattern:gsub("([%^%$%(%)%%%.%[%]%*%+%-%?%[%]])", "\\%1")
+            table.insert(triggerPatterns, "^ {3}" .. escapedPattern .. " \\((\\d+)\\)?$")
         end
-    ]])
-    if debugingScan then print("Persistent trigger created for:", itemName, "Pattern:", fullPattern) end
-
-    
-        --
-        
     else
+        local escapedPattern = triggerData:gsub("([%^%$%(%)%%%.%[%]%*%+%-%?%[%]])", "\\%1")
+        table.insert(triggerPatterns, "^ {3}" .. escapedPattern .. " \\((\\d+)\\)?$")
+    end
 
-         if debugingScan then print("Warning: Trigger for", itemName, "already exists. Skipping.") end
-     end 
+    -- Ensure we pass all patterns as a table to permRegexTrigger
+    if exists("DynamicTrigger_" .. itemName, "trigger") == 0 then
+        permRegexTrigger("DynamicTrigger_" .. itemName, "DynamicVendorTriggers", triggerPatterns, [[
+            if not matches or not matches[2] then return end
+            local matchedCount = tonumber(matches[2])
+            if matchedCount then
+                if isScanning then add_to_count("]] .. itemName .. [[", matchedCount) end
+                if debugingScan then print("Count updated for item:", "]] .. itemName .. [[", "New count:", matchedCount) end
+            end
+        ]])
+
+        if debugingScan then print("Persistent trigger created for:", itemName, "Patterns:", table.concat(triggerPatterns, ", ")) end
+    else
+        if debugingScan then print("Warning: Trigger for", itemName, "already exists. Skipping.") end
+    end
 end
+
+
 
 function checkExistingInventoryFile()
     local file = io.open(filePath, "r")
@@ -161,8 +167,15 @@ end
 function display_store_inventory(store)
     if store == nil then
         for storeName, _ in pairs(_G.inventories) do
-            display_store_inventory(storeName)
+            if storeName ~= "QuarterMaster" then
+                display_store_inventory(storeName)
+            end
         end
+        return
+    end
+
+    if store == "QuarterMaster" then
+        if debugingScan then print("Skipping store:", store) end
         return
     end
 
@@ -195,6 +208,43 @@ function display_store_inventory(store)
     end
 
     print("----------------------------------------")
+end
+
+function display_quartermaster_inventory()
+    local store = "QuarterMaster"
+
+    if not _G.inventories[store] then
+        print("Error: Store not found:", store)
+        return
+    end
+
+    print("--------------------------------------------------------")
+    print(string.format("|%-54s|", store))
+    print("--------------------------------------------------------")
+    print("| Product Name          | Needed | Count | Status      |")
+    print("--------------------------------------------------------")
+
+    local hasItems = false
+
+    for itemName, itemData in pairs(_G.inventories[store].items) do
+        local needed = itemData.needed or 0
+        local count = itemData.count or 0
+        local percentage = (count / needed) * 100
+
+        local status = "OK"
+        if needed > 0 and percentage < 20 then
+            status = "LOW"
+        end
+
+        print(string.format("| %-20s | %-6d | %-5d | %-10s |", itemName, needed, count, status))
+        hasItems = true
+    end
+
+    if not hasItems then
+        print("| No items found in QuarterMaster.      |")
+    end
+
+    print("--------------------------------------------------------")
 end
 
 function processNextStore()
@@ -289,14 +339,16 @@ function display_total_needed_minus_count()
 
     local aggregatedItems = {}
 
-    -- Aggregate item counts from all stores
+    -- Aggregate item counts from all stores except QuarterMaster
     for storeName, storeData in pairs(_G.inventories) do
-        for itemName, itemData in pairs(storeData.items) do
-            if not aggregatedItems[itemName] then
-                aggregatedItems[itemName] = { needed = 0, count = 0 }
+        if storeName ~= "QuarterMaster" then
+            for itemName, itemData in pairs(storeData.items) do
+                if not aggregatedItems[itemName] then
+                    aggregatedItems[itemName] = { needed = 0, count = 0 }
+                end
+                aggregatedItems[itemName].needed = aggregatedItems[itemName].needed + (itemData.needed or 0)
+                aggregatedItems[itemName].count = aggregatedItems[itemName].count + (itemData.count or 0)
             end
-            aggregatedItems[itemName].needed = aggregatedItems[itemName].needed + (itemData.needed or 0)
-            aggregatedItems[itemName].count = aggregatedItems[itemName].count + (itemData.count or 0)
         end
     end
 
