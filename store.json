@@ -98,6 +98,12 @@
     },
     "Ithor_Gel": {
       "trigger": "a tube of Ithor's Own brand silicon gel"
+    },
+    "Dura Head Bacta"{
+      "trigger": "a duralumin-alloy plated helmet"
+    },
+    "Dura Head Verpine"{
+      "trigger": "a duralumin-alloy plated helmet-V"
     }
   },
   "stores": {
@@ -105,6 +111,8 @@
       "store_number": 5,
       "inventory": {
         "ciii_helmet": 3,
+        "Dura Head Verpine": 3,
+        "Dura Head Bacta": 3,
         "ciii_body": 3,
         "cii_helmet": 3,
         "cii_body": 3,
