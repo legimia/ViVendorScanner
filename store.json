@@ -36,6 +36,7 @@
       "trigger": [
         "a combat-grade 'VI' kolto injector",
         "a combat-grade [VI] kolto injector"
+      ]
     },
     "comlink": {
       "trigger": "a Veridian Industries comlink pack"
@@ -44,6 +45,7 @@
       "trigger": [
         "a branded 'VI' industrial backpack",
         "a branded [VI] industrial backpack"
+      ]
     },
     "flashlights": {
       "trigger": [
