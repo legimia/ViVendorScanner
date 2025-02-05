@@ -47,6 +47,9 @@
         "a branded [VI] industrial backpack"
       ]
     },
+    "boots":{
+      "trigger": "a pair of adaptive Xethium fiber mesh boots"      
+    },
     "flashlights": {
       "trigger": [
         "an industrial 'VI' flashlight",
