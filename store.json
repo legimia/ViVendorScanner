@@ -163,7 +163,8 @@
         "blades": 8,
         "pikes": 4,
         "goggles": 4,
-        "datapad": 5
+        "datapad": 5,
+        "boots": 20
       }
     },
     "Wroona": {
@@ -179,7 +180,8 @@
         "rifles": 2,
         "blades": 4,
         "pikes": 2,
-        "datapad": 5
+        "datapad": 5,
+        "boots": 20
       }
     },
     "Kashyyyk": {
@@ -195,7 +197,8 @@
         "rifles": 2,
         "blades": 4,
         "pikes": 2,
-        "datapad": 5
+        "datapad": 5,
+        "boots": 20
       }
     },
     "Arkania": {
@@ -211,7 +214,8 @@
         "rifles": 2,
         "blades": 4,
         "pikes": 2,
-        "datapad": 5
+        "datapad": 5,
+        "boots": 20
       }
     },
     "QuarterMaster": {
