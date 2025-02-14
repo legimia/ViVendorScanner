@@ -218,6 +218,23 @@
         "boots": 20
       }
     },
+    "Arkania": {
+      "store_number": 6,
+      "inventory": {
+        "stimpacks_medpacs": 50,
+        "goggles": 4,
+        "comlink": 4,
+        "backpacks": 4,
+        "flashlights": 10,
+        "repeaters": 2,
+        "pistols": 4,
+        "rifles": 2,
+        "blades": 4,
+        "pikes": 2,
+        "datapad": 5,
+        "boots": 20
+      }
+    },
     "QuarterMaster": {
       "store_number": 1,
       "inventory": {
