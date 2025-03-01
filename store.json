@@ -143,7 +143,7 @@
   },
   "stores": {
     "Ryloth": {
-      "store_number": 6,
+      "store_number": 5,
       "inventory": {
         "ciii_helmet": 3,
         "Dura Head Verpine": 3,
@@ -169,23 +169,6 @@
     },
     "Wroona": {
       "store_number": 3,
-      "inventory": {
-        "stimpacks_medpacs": 50,
-        "goggles": 4,
-        "comlink": 4,
-        "backpacks": 4,
-        "flashlights": 10,
-        "repeaters": 2,
-        "pistols": 4,
-        "rifles": 2,
-        "blades": 4,
-        "pikes": 2,
-        "datapad": 5,
-        "boots": 20
-      }
-    },
-    "Kashyyyk": {
-      "store_number": 5,
       "inventory": {
         "stimpacks_medpacs": 50,
         "goggles": 4,
